@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .main{
+            display:flex;
+        }
+        .color1{
+            height:50px;
+            width: 50px;
+            background-color: whitesmoke;
+
+        }
+        .color2{
+            height:50px;
+            width:50px;
+            background-color:green;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            {% for j in range(0,2) %}
+                <div class="main">
+                    {% for i in range(0, 4) %}
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                    {% endfor %}
+                </div>
+            </tr>
+            <tr>
+                <div class="main">
+                    {% for i in range(0, 4) %}
+                    <div class="color2"></div>
+                    <div class="color1"></div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
